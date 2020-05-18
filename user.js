@@ -293,17 +293,17 @@ user_pref("extensions.blocklist.enabled", true); // [DEFAULT: true]
  * [SETTING] Privacy & Security>Security>... "Block dangerous and deceptive content" ***/
    // user_pref("browser.safebrowsing.malware.enabled", false);
    // user_pref("browser.safebrowsing.phishing.enabled", false);
-/* 0411: disable SB checks for downloads (both local lookups + remote)
- * This is the master switch for the safebrowsing.downloads* prefs (0412, 0413)
+/* 0411: disable SB checks for  (both local lookups + remote)
+ * This is the master switch for the safebrowsing.ds* prefs (0412, 0413)
  * [SETTING] Privacy & Security>Security>... "Block dangerous downloads" ***/
-   // user_pref("browser.safebrowsing.downloads.enabled", false);
+   // user_pref("browser.safebrowsing.downloads.enabled", true);
 /* 0412: disable SB checks for downloads (remote)
  * To verify the safety of certain executable files, Firefox may submit some information about the
  * file, including the name, origin, size and a cryptographic hash of the contents, to the Google
  * Safe Browsing service which helps Firefox determine whether or not the file should be blocked
  * [SETUP-SECURITY] If you do not understand this, or you want this protection, then override it ***/
-user_pref("browser.safebrowsing.downloads.remote.enabled", false);
-user_pref("browser.safebrowsing.downloads.remote.url", "");
+user_pref("browser.safebrowsing.downloads.remote.enabled", true);
+user_pref("browser.safebrowsing..remote.url", "");
 /* 0413: disable SB checks for unwanted software
  * [SETTING] Privacy & Security>Security>... "Warn you about unwanted and uncommon software" ***/
    // user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
@@ -1211,8 +1211,8 @@ user_pref("permissions.delegation.enabled", false);
 /* 2651: enforce user interaction for security by always asking where to download
  * [SETUP-CHROME] On Android this blocks longtapping and saving images
  * [SETTING] General>Downloads>Always ask you where to save files ***/
-user_pref("browser.download.useDownloadDir", false);
-/* 2652: disable adding downloads to the system's "recent documents" list ***/
+user_pref("browser.download.useDownloadDir", true);
+/*true2: disable adding downloads to the system's "recent documents" list ***/
 user_pref("browser.download.manager.addToRecentDocs", false);
 /* 2653: disable hiding mime types (Options>General>Applications) not associated with a plugin ***/
 user_pref("browser.download.hide_plugins_without_extensions", false);
